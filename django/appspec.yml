@@ -1,18 +1,18 @@
 version: 0.0
-os: linux
+os: ubuntu
 files:
-  - source: /index.html
-    destination: /var/www/html/
+  - source: /manage.py
+    destination: /var/manage.py
 hooks:
   BeforeInstall:
-    - location: django/requirements
-      timeout: 300
+    - location: django
+      command: pip install -r requirements.txt
       runas: root
-    - location: scripts/start_server
-      timeout: 300
+  AftereInstall:
+    - location: django/notejam
+      command: ./manage.py syncdb
+      command: ./manage.py migrate
+      command: ./manage.py runserver 0:8000
       runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
+   
 
