@@ -2,7 +2,7 @@ import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = ['52.56.208.140']
+ALLOWED_HOSTS = ['0.0.0.0']
 
 PROJECT_DIR = "{}/../".format(os.path.dirname(__file__))
 
