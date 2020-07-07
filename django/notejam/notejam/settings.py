@@ -7,19 +7,19 @@ ALLOWED_HOSTS = ['0.0.0.0']
 PROJECT_DIR = "{}/../".format(os.path.dirname(__file__))
 
 ADMINS = (
-    ('Sergey Komar', 'komarserjio@gmail.com'),
+    ('Roshin Shelina', 'roshinshelinajayaram@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'notejam.db',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myappdb',
+        'USER': 'myadmin',
+        'PASSWORD': 'goodluck',
+        'HOST': 'myapp.cqbhp59sckqh.eu-west-2.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
